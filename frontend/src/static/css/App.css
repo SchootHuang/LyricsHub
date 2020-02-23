@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+#showcase{
+    display: flex;
+}
+
+#showcase .circle{
+    flex: 2;
+}
+
+#showcase .screen{
+    flex: 1;
+}
+
+
+
+
+

@@ -1,0 +1,24 @@
+#navbar{
+    width: 100%;
+    padding: 1rem;
+    background-color: #3D1B7C;
+    display: flex;
+    align-items: center;
+    color: #FCFCFC;
+
+}
+
+#navbar input{
+    width: 70vw;
+    height: 2rem;
+    margin-left: 10rem;
+}
+
+#navbar .nav-text:hover{
+    color: #eb869f;
+}
+
+#navbar .nav-text{
+    margin: 0 auto;
+    cursor: pointer;
+}

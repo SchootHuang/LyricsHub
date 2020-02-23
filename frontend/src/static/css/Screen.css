@@ -1,0 +1,45 @@
+.screen{
+    background-color: #3D1B7C;
+    height: 90vh;
+}
+
+.screen ul{
+    margin-left: 6.5rem;
+    margin-top: 3rem;
+    line-height: 1.6;
+    font-size: large;
+}
+
+.screen ul li:hover{
+    cursor: pointer;
+    color: coral;
+}
+
+.screen ul li{
+    list-style: none;
+    color: white;
+    padding: 0.3rem;
+}
+
+
+.screen .link{
+    position: absolute;
+    left: 78rem;
+    top: 90vh;
+
+}
+
+.screen .link a:hover{
+    background-color: #367556;
+}
+
+.screen .link a{
+    padding: 1rem 1.9rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #4CC671;
+    border-radius: 33px;
+    font-size: large;
+    letter-spacing: 1px;
+    text-decoration: none;
+}

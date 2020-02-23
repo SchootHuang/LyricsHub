@@ -1,0 +1,79 @@
+/* .square {
+    border: 1px solid #707070    ;
+    padding: 40px;
+    text-align: start;
+    width: 700px;
+    height: 500px;
+    border-style:ridge;
+    margin: 10%;
+}
+
+.content {
+    font-size: 2em;
+    
+    font-family: 'Noto Sans SC', sans-serif;
+    color: #3D1B7C;
+} */
+
+.frame{
+    display: flex;
+}
+
+.frame .lyrics{
+    flex: 2;
+    padding: 0 4rem;
+}
+
+.frame .lyrics .link{
+    padding: 1rem 0;
+}
+
+.frame .lyrics .link a{
+    color: #707070;
+    font-size: large;
+    text-decoration: none;
+}
+
+.frame .lyrics .container{
+    border: black 1px solid;
+    
+}
+
+.frame .lyrics-screen{
+    flex:1;
+    background-color: #3D1B7C;
+    height: 90vh;
+    color: white;
+}
+
+.frame .content{
+    padding: 0.8rem;
+    font-size: large;
+}
+
+.lyrics-screen img{
+    width: 8rem;
+}
+
+.lyrics-screen .artist{
+    margin-left: 3rem;
+    font-size: 2rem;
+}
+
+.frame .lyrics-screen .inner-div{
+    margin: 3rem 3rem;
+}
+
+.frame .lyrics-screen .song-name{
+    border: 1px solid #47EA78; 
+    width: fit-content;
+    margin-top: 2.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 35px;
+    letter-spacing: 1px;
+}
+
+.bt{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,117 @@
+/* html,body,div,h1,h2,p{
+    border:0;
+    font:inherit;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    }
+    
+    
+    
+    .clear {clear: both;}
+    
+    p {
+        font-size: 1em;
+        line-height: 1.4em;
+        margin-bottom: 20px;
+        color: #444;
+    }
+    
+    #cv {
+        border: 0px;
+        width: 100%;
+        max-width: 900px;
+        background: #f3f3f3;
+        margin: -16px auto;
+        padding:0;
+    }
+    
+    .mainDetails {
+        padding: 25px 35px;
+        background: #ededed;
+    }
+    
+    #name h1 {
+        font-size: 2.5em;
+        font-weight: bolder;
+        font-family: 'Noto Sans SC', sans-serif;
+        color: #3D1B7C;
+        margin-bottom: 6px;
+        overflow-y: scroll;
+    }
+    
+    #name h2 {
+        font-size: 1.5em;
+        margin-left: 2px;
+        color: #707070	;	
+        font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    }
+    
+    
+    
+    
+    
+    #name {
+        float: left;
+    }
+    
+
+    ul {
+        border: 0px;
+        padding: 0;
+        list-style-type: none;
+    }
+    img{ display: block;} */
+
+/* New Css */
+
+.container{
+    overflow: hidden;
+}
+
+#headshot img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.mainDetails{
+    display: flex;
+    align-items: center;
+    height: 8rem;
+}
+
+#headshot {    
+    margin-right: 2rem;
+    align-items: center;
+}
+
+.mainDetails .info .name{
+    color: #3D1B7C;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mainDetails .info .songs{
+    color: #707070;
+    font-size: 18px;
+}
+
+.container #list-screen .list-img{
+    background: url('../images/listimg.png') no-repeat center center/contain;
+    height: 35rem;
+    width: 35rem;
+}
+
+.container #list-screen{
+    display: flex;
+}
+
+.ui.menu:first-child{
+    margin-top: 2rem;
+}
+
+.ui.tabular.menu .active.item{
+    color: #3D1B7C;
+}
