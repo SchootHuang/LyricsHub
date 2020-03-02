@@ -7,14 +7,23 @@ import SearchBar from './SearchBar'
 import ShowLyrics from './ShowLyrics';
 import SearchList from './SearchList';
 
-
-
+const API = 'https://localhost:3001/search';
+const DEFAULT = 'Taylor Swift'
 class App extends Component {
 
   state = {
     songs: []
   }
-
+  componentDidMount() {
+    fetch(API)
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error('There has been a problem with your fetch operation:', error);
+      });
+  }
   display = () => {
     this.setState({ songs: ['You Need to Calm Down', 'Shake it Off', 'You Belong With Me', 'Look What You Make Me Do', 'We Are Never Ever Getting Back Together', 'Blank Space', 'Bad Blood', 'All You Had to Do Was Stay', 'Long Live'] })
   }
