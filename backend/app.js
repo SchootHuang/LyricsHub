@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 const querystring = require('querystring')
-
-mongoose.connect("mongodb://localhost:27017/lyricshub", {
-  useNewUrlParser: true
-});
+const express = require("express");
+const app = express()
+const bodyParse = require("body-parser")
 
 const lyricsSchema = new mongoose.Schema({
   album: String,
@@ -13,28 +12,24 @@ const lyricsSchema = new mongoose.Schema({
   year: String,
   artist: String
 });
-
+app.use(bodyParse.json());
 const Lyricshub = mongoose.model("Lyricshub", lyricsSchema, "myCollection");
 
-// Lyricshub.find({ title: "dreaming" }, (err, lyrics) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log(lyrics);
-//   }
-// });
+app.get("/search", async (req, res, next) => {
+  const data =  await Lyricshub.findOne({ artist: "taylorswift" });
+  return res.json({
+    lyric : data
+  })
+})
 
-const serverHandle = (req, res) => {
-  res.setHeader('Content-type', 'application/json')
+mongoose.connect("mongodb://localhost:27017/lyricshub"
 
-  const url = req.url
-  req.path = url.split('?')[0]
-  req.query = querystring.parse(url.split('?')[1])
+)
+    .then(result => {
+      app.listen(3001);
+    })
+    .catch(err => console.log(err));
 
-}
 
-module.exports = {
-  Lyricshub
-}
 
 
