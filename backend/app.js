@@ -14,13 +14,22 @@ const lyricsSchema = new mongoose.Schema({
 });
 app.use(bodyParse.json());
 const Lyricshub = mongoose.model("Lyricshub", lyricsSchema, "myCollection");
-
+// /search?song=taylorswift
+// {song:"tayloswuft"}
 app.get("/search", async (req, res, next) => {
-  const data =  await Lyricshub.findOne({ artist: "taylorswift" });
+  const query = req.query; 
+  const data =  await Lyricshub.findOne(query);
   return res.json({
     lyric : data
   })
 })
+
+// app.get("/search", async (req, res, next) => {
+//   const data =  await Lyricshub.find({ artist: "taylorswift" });
+//   return res.json({
+//     lyric : data
+//   })
+// })
 
 mongoose.connect("mongodb://localhost:27017/lyricshub"
 
