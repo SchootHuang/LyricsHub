@@ -8,24 +8,8 @@ import java.util.List;
 import java.util.Arrays;
 
 @RestController
+@RequestMapping("")
 public class WebServices {
 
-    @RequestMapping("")
-    public String page() {
-        return "dsf";
-    }
-
-    @RequestMapping("/show")
-    public Book getAllBooks() {
-        return new Book(12, "oer");
-    }
 }
 
-//class People {
-//    String name;
-//    int age;
-//    public People(String n, int a) {
-//        name = n;
-//        age = a;
-//    }
-//}
