@@ -12,16 +12,15 @@ public class WebServices {
 
     @RequestMapping("")
     public String page() {
-        return "Defasndjfnad";
+        return "dsf";
     }
 
     @RequestMapping("/show")
     public Book getAllBooks() {
-        return new Book(12, "sdfsd");
+        return new Book(12, "oer");
     }
-
-
 }
+
 //class People {
 //    String name;
 //    int age;
