@@ -20,7 +20,17 @@ public class LyricsRepo {
         return entityManager.find(LyricsHub.class, id);
     }
 
+    public LyricsHub update(LyricsHub lyricsHub) {
+        return entityManager.merge(lyricsHub);
+    }
 
+    public LyricsHub insert (LyricsHub lyricsHub) {
+        return entityManager.merge(lyricsHub);
+    }
 
+    public void deleteById(int id) {
+        LyricsHub lyricsHub = findById(id);
+        entityManager.remove(lyricsHub);
+    }
 
 }

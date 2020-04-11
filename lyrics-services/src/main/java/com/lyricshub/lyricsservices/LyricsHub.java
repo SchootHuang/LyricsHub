@@ -11,6 +11,8 @@ public class LyricsHub {
 
     @Id
     @GeneratedValue
+    private int id;
+
     private String lyrics;
     private String artists;
     private String year;
