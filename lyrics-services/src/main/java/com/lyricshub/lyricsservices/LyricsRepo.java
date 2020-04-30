@@ -32,5 +32,4 @@ public class LyricsRepo {
         LyricsHub lyricsHub = findById(id);
         entityManager.remove(lyricsHub);
     }
-
 }
