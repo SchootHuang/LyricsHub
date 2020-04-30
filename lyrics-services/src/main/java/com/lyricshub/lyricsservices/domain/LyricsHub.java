@@ -1,4 +1,4 @@
-package com.lyricshub.lyricsservices;
+package com.lyricshub.lyricsservices.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,10 +8,9 @@ import javax.persistence.Table;
 @Entity
 public class LyricsHub {
 
-
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 
     private String lyrics;
     private String artists;
@@ -39,6 +38,15 @@ public class LyricsHub {
         this.image = image;
         this.lyrics = lyrics;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getLyrics() {
         return lyrics;
     }
